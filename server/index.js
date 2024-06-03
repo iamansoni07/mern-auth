@@ -10,7 +10,10 @@ mongoose.connect(process.env.MONGO_BASE_URL)
 .then(()=> console.log("databse connected"))
 .catch((err)=> console.log("databse disconnected", err));
 
+
+// const app = express();
 const app = express();
+
 app.use(cors());
 
 app.use("/", Router);
